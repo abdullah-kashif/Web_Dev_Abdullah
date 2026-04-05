@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web Dev Agency</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="app.js" defer></script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#github">GitHub</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section id="home" class="section">
+  <div class="container">
+
+    <div class="left">
+      <h1>We Build Systems That Grow Your Business</h1>
+
+      <p class="sub">
+        From custom websites to automation workflows, we help businesses save time, increase efficiency, and scale faster.
+      </p>
+
+      <a href="#contact">
+        <button class="cta">Get Free Quote</button>
+      </a>
+    </div>
+
+    <div class="right">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+
+  <h2 class="section-title">My Projects</h2>
+
+  <div class="box project-box">
+
+    <!-- IMAGES -->
+    <div class="grid">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" onclick="openProject()">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" onclick="openProject()">
+      <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29" onclick="openProject()">
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row">
+      <div class="stat">
+        <h3><span id="projectCount">0</span>+</h3>
+        <p>Projects</p>
+      </div>
+
+      <div class="stat">
+        <h3><span id="clientCount">0</span>+</h3>
+        <p>Clients</p>
+      </div>
+
+      <div class="stat">
+        <h3><span id="yearsCount">0</span>+</h3>
+        <p>Years Experience</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+
+  <h2 class="section-title">Get a Quote</h2>
+
+  <div class="box contact-box">
+
+    <!-- <form id="contactForm" action="https://formspree.io/f/xwwvrgoa" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="subject" placeholder="Project Type">
+      <textarea name="message" placeholder="Describe your project"></textarea>
+
+      <button type="submit" class="cta submit-btn">
+        Get Free Consultation
+      </button>
+    </form> -->
+
+
+<form id="contact-form" action="https://formspree.io/f/xwvwrgoa" method="POST">
+
+  <input type="text" name="name" id="name" placeholder="Your Name" required>
+
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <input type="text" name="user_subject" placeholder="Subject">
+
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <!-- Hidden Subject Field -->
+  <input type="hidden" name="_subject" id="dynamic-subject">
+
+  <button type="submit" class="cta submit-btn">Send Message</button>
+
+  <p id="form-status"></p>
+
+</form>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<section class="section footer">
+  <h3>Explore My Work on GitHub</h3>
+
+  <a id="github" href="https://github.com/YOUR_USERNAME" target="_blank">
+    <button class="cta">Visit GitHub</button>
+  </a>
+</section>
+
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

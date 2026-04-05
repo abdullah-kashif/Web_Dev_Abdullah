@@ -1,0 +1,298 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+/* ================= NAV ================= */
+.nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  padding: 12px 30px;
+  border-radius: 50px;
+  z-index: 1000;
+}
+
+/* NAV LIST */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+/* NAV LINKS */
+.nav a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 120px 0;
+}
+
+/* ================= CONTAINER ================= */
+.container, .box {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+  padding: 60px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* ================= HERO ================= */
+.left {
+  width: 50%;
+}
+
+.left h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.sub {
+  font-size: 18px;
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* RIGHT IMAGE */
+.right {
+  width: 50%;
+}
+
+.right img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* ================= BUTTON ================= */
+.cta {
+  padding: 14px 30px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00d4ff, #007cf0);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,212,255,0.4);
+}
+
+/* ================= SECTION TITLE ================= */
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #00d4ff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* ================= PROJECT BOX FIX ================= */
+.project-box {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+}
+
+/* ================= PROJECT GRID ================= */
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.grid img {
+  width: 30%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= STATS ROW ================= */
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+/* INDIVIDUAL STAT */
+.stat {
+  text-align: center;
+}
+
+/* NUMBER */
+.stat h3 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #00d4ff;
+}
+
+/* TEXT */
+.stat p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ================= FORM ================= */
+.contact-box form {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* INPUTS + TEXTAREA */
+form input,
+form textarea {
+  width: 100%;
+  margin: 12px 0;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+/* PLACEHOLDER */
+form input::placeholder,
+form textarea::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+/* FOCUS EFFECT */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border: 1px solid #00d4ff;
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 0 10px rgba(0,212,255,0.3);
+}
+
+/* TEXTAREA HEIGHT */
+form textarea {
+  height: 140px;
+  resize: none;
+}
+
+/* ================= BUTTON ================= */
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #00d4ff, #007cf0);
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,212,255,0.4);
+}
+
+/* BUTTON CLICK */
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+}
+
+.footer h3 {
+  margin-bottom: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+  .container, .box {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .left h1 {
+    font-size: 32px;
+  }
+
+  .grid {
+    flex-direction: column;
+  }
+
+  .grid img {
+    width: 100%;
+  }
+
+  .nav ul {
+    gap: 15px;
+  }
+}
