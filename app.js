@@ -4,6 +4,7 @@ const status = document.getElementById("form-status");
 const nameField = document.getElementById("name");
 const subjectField = document.getElementById("dynamic-subject");
 
+
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
@@ -37,6 +38,13 @@ form.addEventListener("submit", async function (e) {
   }
 });
 
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav ul');
+
+burger.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  burger.classList.toggle('toggle'); 
+});
 
 
 // ================= COUNTER ANIMATION (FINAL PREMIUM) =================

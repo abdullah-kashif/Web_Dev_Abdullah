@@ -28,6 +28,10 @@ body {
   padding: 12px 30px;
   border-radius: 50px;
   z-index: 1000;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* NAV LIST */
@@ -50,24 +54,30 @@ body {
   transform: translateY(-2px);
 }
 
-/* ================= SECTIONS ================= */
-.section {
-  padding: 120px 0;
+/* BURGER MENU */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
 }
 
-/* ================= CONTAINER ================= */
-.container, .box {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(25px);
-  border-radius: 20px;
-  padding: 60px;
-  display: flex;
-  gap: 50px;
-  align-items: center;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* BURGER ANIMATION ON TOGGLE */
+.burger.toggle div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.toggle div:nth-child(2) {
+  opacity: 0;
+}
+.burger.toggle div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* ================= HERO ================= */
@@ -295,4 +305,51 @@ form textarea {
   .nav ul {
     gap: 15px;
   }
+}
+
+ /* ================= MOBILE RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+  .nav ul {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    padding-top: 50px;
+    gap: 30px;
+    transition: 0.5s;
+    border-radius: 0 20px 20px 0;
+  }
+
+  .nav ul.active {
+    left: 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 120px 20px;
+}
+
+/* ================= CONTAINER ================= */
+.container, .box {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+  padding: 60px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
